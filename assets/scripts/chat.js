@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function () {
-    const chatButtons = document.querySelectorAll('.event-btn-small');
+    const chatButtons = document.querySelectorAll('.modal-btn');
     const chatPanel = document.querySelector('.chat-panel');
     const chatCloseBtn = document.querySelector('.chat-close');
 

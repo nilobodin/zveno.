@@ -530,6 +530,10 @@ p {
 }
 
 .popup-menu {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-20px);
+    transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s;
     height: 100vh;
     width: 100%;
     background-color: var(--primary-color);
@@ -537,6 +541,12 @@ p {
     z-index: 1000;
     top: 0;
     left: 0;
+}
+
+.popup-menu.active {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
 }
 
 .popup-header {
@@ -903,6 +913,12 @@ p {
 
     .event-btn-small-main {
         width: 100%;
+        display: flex;
+        align-items: center;
+    }
+
+    .chat-icon {
+        width: 30px;
     }
 
     .footer {
@@ -1005,5 +1021,15 @@ p {
 
     .chat-panel {
         width: 100%;
+    }
+
+    .role-block__img {
+        width: 80%;
+    }
+
+    .role-block__btn {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 }

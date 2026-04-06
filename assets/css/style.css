@@ -2,10 +2,10 @@
     --white: #fff;
     --primary-color: #4C1BFF;
     --accent-color: #C251B6;
-    --font64: 64px;
-    --font44: 44px;
-    --font36: 36px;
-    --font24: 24px;
+    --font64: 44px;
+    --font44: 36px;
+    --font36: 24px;
+    --font24: 16px;
     --bradius: 20px;
 }
 
@@ -32,6 +32,7 @@ body {
     border-radius: var(--bradius);
     cursor: pointer;
     transition: 0.3s;
+    width: 100%;
 }
 
 .hidden {
@@ -71,7 +72,15 @@ p {
 
 .logo {
     color: var(--white);
-    font-size: var(--font44);
+    font-size: var(--font36);
+}
+
+.accent-span {
+    color: var(--accent-color);
+}
+
+.btn-link-main {
+    width: 100%;
 }
 
 .hero-logo {
@@ -82,7 +91,7 @@ p {
 
 .hero-text {
     color: var(--white);
-    font-size: var(--font64);
+    font-size: 64px;
     max-width: 940px;
     text-align: center;
     margin: 10% auto;
@@ -125,11 +134,16 @@ p {
 .footer-icons {
     display: flex;
     align-items: center;
+    gap: 20px;
 }
 
 .footer-icon {
-    width: 120px;
+    width: 80px;
     height: 60px;
+}
+
+.vk-icon {
+    width: 40px;
 }
 
 .footer-copy__text {
@@ -291,13 +305,13 @@ p {
 .burger-menu {
     display: flex;
     flex-direction: column;
-    width: 60px;
-    gap: 10px;
+    width: 40px;
+    gap: 5px;
     cursor: pointer;
 }
 
 .burger-menu__item {
-    height: 5px;
+    height: 4px;
     background-color: var(--white);
     transition: 0.5s;
 }
@@ -424,7 +438,9 @@ p {
 .event-btn-small-main {
     width: 30%;
     display: flex;
-    justify-content: space-around;
+    align-items: center;
+    gap: 16px;
+    justify-content: center;
 }
 
 .event-btn-small,
@@ -476,7 +492,7 @@ p {
 .mero-wrapper__days {
     display: flex;
     flex-direction: column;
-    gap: 8px;
+    gap: 16px;
 }
 
 .mero-wrapper__day {
@@ -495,10 +511,6 @@ p {
     padding: 16px;
     border-radius: var(--bradius);
     background-color: var(--white);
-}
-
-.mero-wrapper__days-date {
-    margin-top: 30px;
 }
 
 .mero-wrapper_days_day-block-time,
@@ -589,7 +601,7 @@ p {
 .popup-btn-text {
     text-align: center;
     color: var(--primary-color);
-    font-size: var(--font24);
+    font-size: var(--font36);
 }
 
 .chat-panel {
@@ -792,6 +804,14 @@ p {
     visibility: visible;
 }
 
+.chat-icon {
+    width: 30px;
+}
+
+.mero-desc__detail_img {
+    width: 20px;
+}
+
 @media (max-width: 430px) {
 
     .hero-logo,
@@ -800,8 +820,12 @@ p {
     }
 
     .hero-text {
-        font-size: var(--font36);
-        margin: 40% auto;
+        display: inline-block;
+        word-break: keep-all;
+        width: 0;
+        min-width: 100%;
+        white-space: pre-line;
+        font-size: var(--font64);
     }
 
     .about-us-container {
@@ -939,7 +963,7 @@ p {
         width: 60px;
     }
 
-    .vk-icon {
+    img.vk-icon {
         width: 40px;
         order: -1;
     }
